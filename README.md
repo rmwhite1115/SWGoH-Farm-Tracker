@@ -55,9 +55,9 @@ java SWGoHFarmTracker
 ```
 
 3. Follow the on-screen menu:
-   Option 1: List all trackable Event Units
-   Option 2: View and Update progress for specific unit
-   Option 3: Exit
+- Option 1: List all trackable Event Units
+- Option 2: View and Update progress for specific unit
+- Option 3: Exit
 
 ## Concepts from Programming Principles 1 Used in the Project
 
@@ -94,7 +94,6 @@ java SWGoHFarmTracker
 - Building an intuitive text-based user interface for console applications.
 - Organizing code into logical modules (EventUnits, Requirement, ProgressTracker).
 ### Future Features
-- Saving and Loading from Text FIle
 - Crystal Income tracker
 - Relic Material Income tracker
 - Rough calculations for time to reach unit based on incomes

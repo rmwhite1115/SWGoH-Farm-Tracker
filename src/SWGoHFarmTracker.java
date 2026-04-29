@@ -8,6 +8,8 @@ public class SWGoHFarmTracker {
 		EventUnits[] units = createAllUnits();
 		ProgressTracker tracker = new ProgressTracker(units.length, 20);
 		
+		
+		// This automatically checks for a progress.txt file in the project directory and imports data if so.
 		tracker.loadProgress();
 		
 		System.out.println("--------------------------------------------------------------");
@@ -16,6 +18,7 @@ public class SWGoHFarmTracker {
 		
 		boolean running = true;
 		
+		// This will always loop the tracker back to the main menu when the user has fully navigated each menu.
 		while (running) {
 			System.out.println("Main Menu:");
 			System.out.println("1. List all trackable Event Units");
@@ -28,6 +31,7 @@ public class SWGoHFarmTracker {
 			
 			System.out.println();
 			
+			// This executes the necessary command based on the user input.
 			if (choice == 1) {
 				listUnits(units);
 			} else if (choice == 2) {
@@ -57,6 +61,8 @@ public class SWGoHFarmTracker {
 	
 	public static EventUnits[] createAllUnits() {
 		EventUnits[] units = new EventUnits[25]; // 10 Galactic Legends + 3 Galactic Legend Ships + 12 key legendaries
+		
+		// This initializes every journey unit and their requirements.
 		
 		// Galactic Legends
 		
@@ -238,6 +244,8 @@ public class SWGoHFarmTracker {
 		units[9].addRequirement(new Requirement("Bossk", false, 8));
 		units[9].addRequirement(new Requirement("Rey's Millennium Falcon", true, 7));
 		
+		// Galactic Legend Ships
+		
 		// 10 == Executor
 		units[10] = new EventUnits("Executor", 14);
 		units[10].addRequirement(new Requirement("Darth Vader", false, 7));
@@ -290,6 +298,8 @@ public class SWGoHFarmTracker {
 		units[12].addRequirement(new Requirement("Scimitar", true, 7));
 		units[12].addRequirement(new Requirement("Sith Fighter", true, 7));
 		units[12].addRequirement(new Requirement("Ebon Hawk", true, 7));
+		
+		// General Legendary and Epic Confrontations
 		
 		// 13 == Darth Malak
 		units[13] = new EventUnits("Darth Malak", 12);
@@ -410,6 +420,7 @@ public class SWGoHFarmTracker {
 		return units;
 	}
 	
+	// This method is used to print out a list of every unit that is available to track.
 	public static void listUnits(EventUnits[] units) {
 		System.out.println("All Trackable Event Units:");
 		for (int i = 0; i < units.length; i++) {
@@ -419,6 +430,7 @@ public class SWGoHFarmTracker {
 		System.out.println();
 	}
 	
+	// This method utilizes listUnits() and allows the user to modify the values for each requirement.
 	public static void viewAndUpdate(EventUnits[] units, ProgressTracker tracker, Scanner input) {
 		listUnits(units);
 		
@@ -426,11 +438,13 @@ public class SWGoHFarmTracker {
 		int unitChoice = input.nextInt() - 1;
 		System.out.println();
 		
+		// This aborts to the main menu if the value is not valid.
 		if (unitChoice < 0 || unitChoice >= units.length) {
 			System.out.println("Invalid option");
 			return;
 		}
 		
+		// This returns the appropriate unit requirements for the user choice.
 		EventUnits unit = units[unitChoice];
 		int[] currentLevels = new int[unit.numRequirements];
 		
@@ -449,6 +463,7 @@ public class SWGoHFarmTracker {
 			int reqNum = input.nextInt() - 1;
 			System.out.println();
 			
+			// This updates the appropriate unit's level based on the last prompt.
 			if (reqNum >= 0 && reqNum < unit.numRequirements) {
 				System.out.print("New Level: ");
 				int newLevel = input.nextInt();

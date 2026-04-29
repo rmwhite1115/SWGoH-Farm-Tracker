@@ -5,11 +5,13 @@ public class ProgressTracker {
 	int numberOfUnits;
 	private final String FILE_NAME = "progress.txt";
 
+	// This creates an array that stores every event unit's requirements and current level.
 	public ProgressTracker(int numUnits, int maxReqs) {
 		numberOfUnits = numUnits;
 		progress = new int[numUnits][maxReqs];
 	}
 
+	// This updates the value of the requirement's level in an 2d array of the event units and their individual requirements.
 	public void updateProgress(int unitIndex, int reqIndex, int newValue) {
 		if (unitIndex >= 0 && unitIndex < numberOfUnits) {
 			progress[unitIndex][reqIndex] = newValue;
@@ -17,10 +19,12 @@ public class ProgressTracker {
 		}
 	}
 
+	// This returns the specified units level stored in the array.
 	public int getCurrentLevel(int unitIndex, int reqIndex) {
 		return progress[unitIndex][reqIndex];
 	}
 
+	// This saves the values for each requirements levels to a txt file.
 	public void saveProgress() {
 		try (PrintWriter writer = new PrintWriter(new FileWriter(FILE_NAME))) {
 			for (int i = 0; i < progress.length; i++) {
@@ -34,6 +38,7 @@ public class ProgressTracker {
 		}
 	}
 	
+	// This loads every requirements level from a txt file.
 	public void loadProgress() {
 		File file = new File(FILE_NAME);
 		if (!file.exists()) {
@@ -56,6 +61,7 @@ public class ProgressTracker {
 		}
 	}
 	
+	// This will reset every index back to 0.
 	public void resetAllProgress() {
 		for (int i = 0; i < progress.length; i++) {
 			for (int j = 0; j < progress[i].length; j++) {
