@@ -1,0 +1,19 @@
+/bin/
+
+# Eclipse
+.classpath
+.project
+.settings/
+.metadata/
+bin/
+target/
+
+# Java
+*.class
+*.jar
+*.war
+*.ear
+
+# OS files
+.DS_Store
+Thumbs.db
