@@ -1,6 +1,6 @@
 # SWGoH Farm Tracker
 
-A console-based progress tracker for *Star Wars: Galaxy of Heroes* (SWGoH) players to monitor their farming progress toward **Galactic Legends**, Legendary units, and key ships.
+A console-based progress tracker for *Star Wars: Galaxy of Heroes* (SWGoH) players to monitor their farming progress toward **Galactic Legends** and Legendary units.
 
 Built as a Java application using object-oriented programming principles.
 
@@ -32,7 +32,7 @@ The program includes 25 major units (primarily Galactic Legends and select legen
 - Executor
 - Profundity
 - Leviathan
-- And many more (including newer units Baylan Skoll, Cassian Andor (Undercover), and Maul (Hate-Fueled)
+- And more (including newer units Baylan Skoll, Cassian Andor (Undercover), and Maul (Hate-Fueled)
 
 ## How to Run the Program
 
