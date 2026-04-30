@@ -71,14 +71,14 @@ public class SWGoHFarmTracker {
 		units[0].addRequirement(new Requirement("Finn", false, 5));
 		units[0].addRequirement(new Requirement("Resistance Trooper", false, 5));
 		units[0].addRequirement(new Requirement("Rey Scavenger", false, 7));
-		units[0].addRequirement(new Requirement("Resitance Pilot", false, 3));
+		units[0].addRequirement(new Requirement("Resistance Pilot", false, 3));
 		units[0].addRequirement(new Requirement("Poe Dameron", false, 5));
-		units[0].addRequirement(new Requirement("Resitance Hero Finn", false, 5));
+		units[0].addRequirement(new Requirement("Resistance Hero Finn", false, 5));
 		units[0].addRequirement(new Requirement("Amilyn Holdo", false, 5));
 		units[0].addRequirement(new Requirement("Rose Tico", false, 5));
-		units[0].addRequirement(new Requirement("Resitance Hero Poe", false, 5));
+		units[0].addRequirement(new Requirement("Resistance Hero Poe", false, 5));
 		units[0].addRequirement(new Requirement("BB-8", false, 7));
-		units[0].addRequirement(new Requirement("Veteran Smuggler Chewbacce", false, 3));
+		units[0].addRequirement(new Requirement("Veteran Smuggler Chewbacca", false, 3));
 		units[0].addRequirement(new Requirement("Raddus", true, 5));
 
 		// 1 == Supreme Leader Kylo Ren
@@ -89,7 +89,7 @@ public class SWGoHFarmTracker {
 		units[1].addRequirement(new Requirement("Kylo Ren", false, 7));
 		units[1].addRequirement(new Requirement("Captain Phasma", false, 5));
 		units[1].addRequirement(new Requirement("First Order Executioner", false, 5));
-		units[1].addRequirement(new Requirement("Veteran Smuggle Han Solo", false, 3));
+		units[1].addRequirement(new Requirement("Veteran Smuggler Han Solo", false, 3));
 		units[1].addRequirement(new Requirement("Sith Trooper", false, 5));
 		units[1].addRequirement(new Requirement("First Order Special Forces TIE Pilot", false, 3));
 		units[1].addRequirement(new Requirement("General Hux", false, 5));
@@ -176,7 +176,7 @@ public class SWGoHFarmTracker {
 		units[6].addRequirement(new Requirement("Gamorrean Guard", false, 3));
 		units[6].addRequirement(new Requirement("Outrider", true, 7));
 		units[6].addRequirement(new Requirement("Greedo", false, 6));
-		units[6].addRequirement(new Requirement("Skiff Guard (Lando Calrissian", false, 5));
+		units[6].addRequirement(new Requirement("Skiff Guard (Lando Calrissian)", false, 5));
 		units[6].addRequirement(new Requirement("Jedi Knight Luke Skywalker", false, 7));
 		units[6].addRequirement(new Requirement("Jawa", false, 3));
 		units[6].addRequirement(new Requirement("URoRRuR'R'R", false, 4));
