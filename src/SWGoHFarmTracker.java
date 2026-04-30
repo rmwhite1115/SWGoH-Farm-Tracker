@@ -5,6 +5,7 @@ public class SWGoHFarmTracker {
 	public static void main(String[] args) {
 		Scanner input = new Scanner(System.in);
 
+		// This initializes all the trackable units and their requirements.
 		EventUnits[] units = createAllUnits();
 		ProgressTracker tracker = new ProgressTracker(units.length, 20);
 
@@ -18,8 +19,7 @@ public class SWGoHFarmTracker {
 
 		boolean running = true;
 
-		// This will always loop the tracker back to the main menu when the user has
-		// fully navigated each menu.
+		// This will always loop the tracker back to the main menu when the user has fully navigated each menu.
 		while (running) {
 			System.out.println("Main Menu:");
 			System.out.println("1. List all trackable Event Units");
@@ -59,9 +59,12 @@ public class SWGoHFarmTracker {
 	}
 
 	public static EventUnits[] createAllUnits() {
+		
+		// AN additional index in this array is needed for every trackable event unit.
 		EventUnits[] units = new EventUnits[25]; // 10 Galactic Legends + 3 Galactic Legend Ships + 12 key legendaries
 
 		// This initializes every journey unit and their requirements.
+		// New Legendaries can be added by creating a new block with the unit name and requirement info.
 
 		// Galactic Legends
 

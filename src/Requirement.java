@@ -1,7 +1,7 @@
 
 public class Requirement {
 	String name;
-	boolean isShip;
+	boolean isShip;		// True if it is a ship, false if it is a character.
 	int requiredLevel;
 	
 	// This takes three parameters for the name, ship or unit, and level for an individual requirement object.
@@ -11,7 +11,7 @@ public class Requirement {
 		requiredLevel = level;
 	}
 	
-	// This prints out whether the individual requirement is complete.
+	// This prints out whether the individual requirement is complete and their current levels.
 	public void printInfo(int i, int currentLevel) {
 		String type = isShip ? "Stars" : "Relics";
 		String status = (currentLevel >= requiredLevel) ? " (COMPLETE)" : "";
